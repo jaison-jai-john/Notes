@@ -5,7 +5,7 @@ from flask_login import LoginManager, login_manager
 from flask_sqlalchemy import SQLAlchemy
 
 DB_NAME = "database.db"
-app = Flask("app")
+app = Flask(__name__)
 app.config["SECRET_KEY"] = "akslfyqnoahdjaixhdfanfabu#af"
 app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_NAME}"
 db = SQLAlchemy(app)
